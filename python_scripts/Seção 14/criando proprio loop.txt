@@ -1,0 +1,19 @@
+"""
+Criando sua própria versão de loop
+
+
+for num in range[1, 2, 3, 4, 5]:
+    print(num)
+for letra in "Luccas Lopes":
+    print(letra)
+"""
+
+def meu_for(iteravel):
+    it = iter(iteravel)
+    while True:
+        try:
+            print(next(it))
+        except StopIteration:
+            break
+
+print(meu_for("Luccas"))

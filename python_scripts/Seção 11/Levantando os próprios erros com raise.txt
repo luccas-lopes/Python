@@ -1,0 +1,42 @@
+"""
+Levantando os próprios erros com raise
+
+raise -> lança exceções
+
+Obs: O raise não é uma função. É uma palavra reservada, assim como def ou qualquer outra em Python.
+Para simplificar, pense no raise como sendo útil para que possamos criar nossas próprias exceções e mensagens de erro.
+
+A forma geral de utilização é:
+
+raise TipoDoErro("Mensagem de erro")
+raise ValueError("Valor incorreto")
+
+
+
+# Exemplo real
+
+def colore(text, cor):
+    if type(texto) is not str:
+        raise TypeError("Texto precisa ser uma string!")
+    if type(cor) is not str:
+        raise TypeError("Cor precisa ser uma strin!")
+    return f"O texto {text} será impresso na cor {cor}."  
+
+print(colore("Luccas", "Azul"))
+print(colore(4, "Amarelo"))
+"""
+
+# Exemplo real
+
+def colore(text, cor):
+    cores = {"azul", "amarelo", "vermelho"}
+    if type(texto) is not str:
+        raise TypeError("Texto precisa ser uma string!")
+    if type(cor) is not str:
+        raise TypeError("Cor precisa ser uma strin!")
+    if cor not in cores:
+        raise ValueError(f"A cor precisa ser uma entre: {cores}")
+    return f"O texto {text} será impresso na cor {cor}."  
+
+print(colore("Luccas", "Azul"))
+print(colore(4, "Amarelo"))

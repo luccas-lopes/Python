@@ -1,0 +1,29 @@
+"""
+- POO: Programação Orientada a Objetos
+
+- Paradigma de programação é a forma/metodologia utilizada para
+pensar/desenvolver sistemas.
+
+Principais elementos da Orientação a Objetos
+
+- Classe -> Modelo do objeto do mundo real sendo represenado computacionalmente.
+- Atributo -> Características do objeto.
+- Método -> Comportamento do objeto (funções).
+- Construtor -> Método especial utilizado para criar objetos.
+- Objeto -> Instância da classe
+"""
+
+numero = 10
+print(numero)
+print(type(numero))
+
+nome = "Luccas"
+print(nome)
+print(type(nome))
+
+class Produto:
+    pass
+
+PS4 = Produto()
+print(PS4)
+print(type(PS4))

@@ -1,0 +1,33 @@
+"""
+Teste de memória com generators
+
+# Sequência de Fibonacci
+1, 1, 2, 3, 4, 5, 8, 13...
+"""
+
+
+# usando lista
+def fib_lista(max):
+    nums = []
+    a, b = 0, 1
+    while len(nums) < max:
+        nums.append(b)
+        a, b = b, a + b
+    return nums
+
+
+# Testando função 449MB
+for n in fib_lista(100):
+    print(n)
+
+# Usando geradores
+
+def fib_gen(max):
+    a, b, contador = 0, 1, 0
+    while contador < max:
+        yield a
+        contador += 1
+
+# Testando generator
+for n in fib_gen(100):
+    print(n)

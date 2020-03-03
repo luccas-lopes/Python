@@ -1,0 +1,122 @@
+""" 
+Sistema de arquivos - Manipulação
+
+# Descobrindo se um arquivo ou diretório existe
+# Arquivo
+print(os.path.exists('arquivo.txt))
+print(os.path.exists('frutas.txt'))
+
+# Diretório
+print(os.path.exists('pythonEssencial/luccas'))
+print(os.path.exists('outro'))
+
+# Path absolutos
+print(os.path.exists('/home/PythonEssencial")) #False
+
+ 
+# Criando arquivos
+
+# Forma 1
+open('arquivo-teste.txt, 'w').close()
+
+# Forma 2
+open('arquivo-teste2.txt, 'a').close()
+
+# Forma 3
+
+with open('arquivo-teste3.txt', 'w') as arquivo:
+   pass
+
+# Criando arquivos
+os.mknod('arquivo-teste4.txt')
+os.mknod('/home/PythonEssencial/essencial.txt')
+
+os.mkdir('/home/geek/templates')
+
+os.mkdir('/etc/templates'0
+
+# multidiretórios
+
+os.makedirs('template2/novo2/outro2', exist_ok=True)
+
+os.rename('geek2/novo2', 'geek2')
+
+# Arquivos
+os.rename('geek2/novo2/outro2/teste.txt', geek2/novo2/outro2/geek.txt')
+
+# Renomear arquivos e diretóriso
+# Arquivos
+os.rename('frutas.txt', 'cesta.txt')
+
+# Atenção: tomar culdado com o comando de deleção, eles não vão para lixeira, eles somem.
+
+# Removendo arquivos
+os.remove('geek.txt')
+# Se o arquivo estiver em uso não poderá ser deletado e terá um erro.
+# Não se pode remover diretórios com os.remove()
+
+# Removendo diretórios vazios
+
+os.rmdir('templates')
+# OBS: Dará OSError se o diretório não estiver vazio.
+
+# Removendo uma árvore de diretórios
+
+for arquivo in os.scandir('geek2'):
+    if arquivo.is_file():
+        os.remove(arquivo.path)
+
+# Podemos remvoer uma árvore de diretórios vaios
+os.removedirs('geek2/mais')
+
+os.remove('cesta1.txt')  # Não vai para a lixera. É deletado imediatamente.
+
+# Importando a biblioteca send2trash (Arquivos e diretórios vão à lixeira)
+from send2trash import send2trash
+send2trash('cesta2.txt')  # Vai para a lixera. Pode ser restaurado.
+from send2trash import send2trash
+send2trash('teste')  # Diretório
+
+# Criando um diretório temporário
+with tempfile.TemporaryDirectory() as tmp:
+    print(f"Criei o diretório temporário em {tmp}")
+    with open(os.path.join(tmp, 'arquivo_temporario.txt'), 'w') as arquivo:
+        arquivo.write('Luccas Lopes\n')
+    input()
+
+# Estamos criando um diretório temporário, abrindo o mesmo e dentro dele criando
+# um arquivo para escrevermos um texto. No final um input() só para mantermos
+# os arquivos temporários 'vivos' dentro dos blocos with.
+
+# Obs: Possivelmente, o código acima não irá funcionar se você estiver utilizando o Windows
+# Por conta desse sitema trabalhar de forma diferente com arquivos temporários.
+  
+
+# Criando um arquivo temporário
+with tempfile.TemporaryFile() as atmp:
+    tmp.write(b"Geek University\n")  # O b converte a string para binário.
+    tmp.seek(0)
+    print(tmp.read())
+
+
+# Sem o bloco with
+
+arquivo = tempfile.TemporaryFile()
+arquivo.write(b"Luccas Lopes\n")
+arquivo.seek(0)
+print(arquivo.read())
+arquivo.close()
+
+
+arquivo = tempfile.NamedTemporaryFile()
+arquivo.write(b"Luccas Lopes\n")
+print(arquivo.name)
+print(arquivo.read())
+input()
+arquivo.close()   
+
+https://docs.python.org/3/library/os.html?highlight=os#module-os
+"""
+import os
+import tempfile
+

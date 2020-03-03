@@ -1,0 +1,18 @@
+"""
+Expressões lambdas
+"""
+
+lambda x: 3 * x + 8;
+conta = lambda x: 3 * x + 8;
+print(conta(8));
+
+def funcao_quadratica(a, b, c):
+    return lambda x: a * x ** 2 + b * x + c;
+marca1 = funcao_quadratica(2, 4, 6);
+
+print(marca1(0));
+print(marca1(1));
+print(marca1(-1));
+
+print(funcao_quadratica(2, 4, 1)(3));
+

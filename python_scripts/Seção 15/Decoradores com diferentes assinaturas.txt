@@ -1,0 +1,53 @@
+"""
+Decoradores com diferentes assinaturas
+
+# Para resolver, utilizamos um padrão de projeto, chamado Decorator Pattern
+
+def gritar(funcao):
+    def aumentar(nome):
+        return funcao(nome).upper()
+    return aumentar
+
+@gritar
+def saudacao(nome):
+    return f"Olá, meun nome é {nome}"
+
+@gritar
+def ordenar(principal, acompanhamento):
+    return f"Eu gostaria de {principal}, acompanhado de {acompanhamento}, por favor."
+
+# print(saudacao("Luccas"))
+print(ordenar("Peixe", "Salada"))
+
+A assinatura de uma função é representada pelo seu retorno, nome e parâmetros de entrada.
+
+"""
+
+# Refatorando com a Decorator Pattern
+
+def gritar(funcao):
+    def aumentar(*args, **kwargs):
+        return funcao(*args, *kwargs).upper()
+    return aumentar
+
+@gritar
+def saudacao(nome):
+    return f"Olá, meu nome é {nome}"
+
+@gritar
+def ordenar(principal, acompanhamento):
+    return f"Eu gostaria de {principal} acompanhado de {acompanhamento}."
+    
+    
+print(saudacao("Luccas"))
+print(ordenar("Peixe", "Salada"))
+
+
+@gritar
+def lol():
+    return "lol"
+
+print(lol())
+
+# Obs: Vale lembrar que podemos utilizar parâmetros nomeados
+

@@ -1,0 +1,92 @@
+"""
+Sistema de arquivos - Navegação
+
+Revisão de sistema de arquivos
+
+Root Directory - Diretório raiz.
+Windows 
+C:\
+
+Path - Caminho do arquivo até o diretório onde ele está armazenado.
+Paths Absolute da raiz ao arquivo
+Paths Relative do diretório ao arquivo.
+
+Para fazer uso de manipulação de arquivos do sistema operacional precisamos importar e fazer o uso do módulo os.
+os -> Operating System - Sistema Operacional
+
+
+# getcwd() -> Pega o current work directory - diretório de trabalho corrente
+# Retorna o path (caminho) absoluto
+print(os.getcwd())
+
+# Para mudar o diretório, podemos utilizar o chdir()
+os.chdir("..")
+print(os.getcwd())
+
+os.chdir("..")
+print(os.getcwd())
+
+os.chdir("..")
+print(os.getcwd())
+
+os.chdir("..")
+print(os.getcwd())
+
+os.chdir("..")
+print(os.getcwd())
+
+os.chdir("..")
+print(os.getcwd())
+
+# Podemos checar se um relatório é absoluto ou relativo
+
+print(os.path.isabs('/home/(ver)/")) # True
+
+# Obs para usuários Windows
+# Terá que ter cuidado ao verificar diretórios.
+
+print(os.path.isabs('C:\\Users\\PHILCO")) # True
+
+# Podemos identificar o sistema operacional com o módulo 'os'
+print(os.name)  # posix (Linux e Mac, nt (Windows)
+
+# Podemos ter mais detalhes do sistema operacional
+print(os.uname())
+
+import sys
+print(sys.platform)
+
+"/home/geek/workspace"
+
+print(os.getcwd())  # /media/sf_Documents/vm/PycharmProjects/guppe/geek/university
+
+res = os.path.join(os.getcwd(), "geek", "university")
+os.chdir(res)
+print(os.getcwd())  # /media/sf_Documents/vm/PycharmProjects/guppe
+
+# Veja que o os.path.join() recebe dois parâmetros, sendo o primeiro o diretório atual e o segundo o 
+# diretório que será juntado ao atual.
+
+
+"""
+
+# Fazer o import 
+import os
+
+# Podemos listar os arquivos e diretórios com o listdir() e com mais detalhes o scandir()
+# print(os.listdir('C://'))
+# print(os.scandir('C://'))
+scanner = os.scandir()
+arquivos.list(scanner)
+print(arquivos)
+print(dir(arquivos[0])
+print(arquivos[0].name)  # Nome do arquivo
+print(arquivos[0].inode)  # Numeração do objeto na árvore de diretórios 
+print(arquivos[0].is_dir) # É um diretório? False
+print(arquivos[0].is_file) # É um arquivo? True
+print(arquivos[0].is_symlink)  # É um link simbólico? False
+print(arquivos[0].path)  # Caminho até o arquivo
+print(arquivos[0].stat)  # Estatísticas do arquivo
+
+# Observação: Quando utilizamos a função scandir() nós precisamos fecha-la assim quando abrimos um arquivo   
+scanner.close()

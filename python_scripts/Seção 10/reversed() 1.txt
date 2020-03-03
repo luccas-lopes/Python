@@ -1,0 +1,13 @@
+""""
+Reversed
+
+A função reversed() funciona com qualquer iterável.
+
+Sua função é inverter o iterável.
+
+A função reversed() retora um iterável chamado List Revesrse Iterator
+""'
+lista = [1, 2, 3, 4, 5]
+res = reversed(lista)
+print(res)
+print(type(res))

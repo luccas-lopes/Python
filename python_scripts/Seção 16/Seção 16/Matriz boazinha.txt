@@ -1,0 +1,16 @@
+from random import randrange
+x = int(input())
+y = int(input())
+
+matriz = list(range(x))
+
+for i in matriz:
+    matriz[i] = list(range(y))
+    for j in matriz[i]:
+        matriz[i][j] = randrange(1, 10)
+
+# linhas = (linha for linha in matriz)
+# print(list(linhas))
+for linha in matriz:
+    ret = list(linha)
+    print(ret)

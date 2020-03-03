@@ -1,0 +1,13 @@
+"""
+Módulos Customizados
+
+Como módulos Python nada mais são do que arquivos Python, então, TODOS os arquivos
+que criamosneste curso são módulos Pyhon prontos para serem utilizados
+
+# Importando uma função específica do nosso módulo
+from teste import soma
+print(soma(2, 4));
+
+"""
+# Importando todo o módulo (Temos acesso TODOS os elementos)
+import teste as tst

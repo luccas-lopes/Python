@@ -1,0 +1,22 @@
+"""
+Pacotes
+Módulo -> É apenas um arquivo Python que pode ter diversas funções para utilizarmos.
+Pacote -> É um diretório contendo uma coleção de módulo.
+Observação: Nas versões 2.x do Python, um pacote Python deveria conter dentro dele um
+arquivo chamado ___ini__.py.
+Nas versões do Python 3.x, não é mais obrigatório a utilização desse arquivo, mas
+normalmente ainda é utilizado para manter compatibilidade.
+"""
+from pythonEssencial import p1, p2
+from pythonEssencial.luccas import p3, p4
+from pythonEssencial.p1 import funcao1
+from pythonEssencial.luccas.p4 import funcao4
+print(p1.pi)
+print(p1.funcao1(2, 4))
+print(p2.nome)
+print(p2.funcao2())
+# Acessando subpacotes: nome do pacote.outropacote
+
+
+print(p3.funcao3())
+print(p4.funcao4())

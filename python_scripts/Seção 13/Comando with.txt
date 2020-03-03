@@ -1,0 +1,22 @@
+"""
+Bloco with
+
+Passo para trabalha com arquivos
+1 - Abrir arquivo (open())
+2 - Manipulando arquivo
+3 - Fechar arquivo (close()) (Verificar se está fechado: closed.
+
+O bloco with é utilizado para criar um contexto de trabalho, onde os recursos utilizados
+são fechados após o bloco with.
+
+arquivo = open('texto.txt')
+"""
+
+# O bloco with - Forma Pythônica de manipular arquivos
+
+with open('texto.txt') as arquivo:
+    print(arquivo.readlines())
+    print(arquivo.closed)  # False
+
+# print(arquivo.read())
+print(arquivo.closed)  # True

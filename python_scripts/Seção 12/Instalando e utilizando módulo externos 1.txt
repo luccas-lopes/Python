@@ -1,0 +1,26 @@
+"""
+Módulos externos
+Utilizamos o gerenciador de pacotes Pyton chamado PIP - Python Installer Package
+https://pypi.org
+
+colorama -> É utilizado para permitir impressão de texos coloridos no terminal.
+
+Instalando um módulo:
+pip install nome-do-módulo
+
+# no terminal: pip install colorama.
+
+from colorama import init
+from colorama import Fore, Back, Style
+init()
+print(Fore.RED + "Luccas");
+print(Fore.GREEN + "Lopes");
+print(Fore.BLUE + Back.YELLOW + "Silva");
+print(Fore.BROWN + Back.CYAN + Style.DIM + "Silva");
+"""
+
+import pydf
+
+pdf = pydf.generate_pdf("<h1>Luccas Lopes Silv</h1>");
+with open("test_doc.pdf", "wb") as f:
+    f.write(pdf)

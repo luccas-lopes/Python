@@ -1,0 +1,59 @@
+"""
+Sorted
+
+Obs: Não confunda, apesar do nome, com a função sort() que já estudamos em listas o sort()
+só funciona em listas.
+
+Podemos utilizar o sorted() para qualquer iterável.
+
+Como o próprio nome diz, sorted() serve para ordenar.
+
+# Exemplo
+
+numeros = [1, 5, 2, 3, 3];
+print(numeros);
+
+print(sorted(numeros)); # Ordena do menor para o maior.
+
+print(numeros);
+
+
+numeros = [1, 5, 2, 3, 3];
+print(numeros)
+print((sorted(numeros));
+# Adicionando parâmetros ao sorted()
+print(sorted(numeros, reverse=True)) #Ordena do maior para o menor.
+
+# Podemos utilizar o sorted() para coisas mais complexas
+
+usuarios = [
+    {"username": "samuel", "tweets":["Eu adoro bolos", "Eu adoro pizza"]},
+    {"username": "caska", "tweets":["Eu amo meu gato."]},
+    {"username": "jeff", "tweets":[], "cor": "amarelo"},
+    {"username": "boby123", "tweets":[], "cor": preto, "musica": "rock"},
+    {"username": "doggo", "tweets":["Eu gosto de cachorros", "vou sair hj"]},
+]
+
+print(usuarios);
+# Ordenando por username - Ordem Alfabética
+print(sorted(usuarios, key=len));
+print(sorted(usuarios, key=lambda usuario: usuario["username"]));
+print(sorted(usuarios, key=lambda usuario: usuario["username"], reverse=True));
+
+# Ordenando pelo número de tweets
+print(sorted(usuarios, key=lambda usuario: len(usuario["tweets"])));
+print(sorted(usuarios, key=lambda usuario: len(usuario["tweets"], reverse=True)));
+
+"""
+
+# Último exemplo
+
+musicas = [
+{"title": "Thunderstruck", "tocou": 3},
+{"title": "Dead Skin Mask", "tocou": 2},
+{"title": "Back in Black", "tocou": 4},
+{"title": "Too old to rock'in'roll, to young to die", "tocou": 32}
+]
+# Ordena da menos tocada para a mais tocada
+print(sorted(musicas, key = lambda musica: musica["tocou"]));
+print(sorted(musicas, key = lambda musica: musica["tocou"], reverse=True));

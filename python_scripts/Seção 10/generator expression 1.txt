@@ -1,0 +1,64 @@
+"""
+Generator Expression
+
+Em aulas anteriores nós estudamos:
+- List Comprehension;
+- Dictionary Comprehension;
+- Set Comprehension;
+
+Não vimos:
+- Tuple Comprehension... Porque elas se chamam generators;
+nome = ["Luccas", "Leonardo", "Camila", "Carla", "Cassiopeia', "Silvio']
+
+print(any([nome[0] == "L" for nome in nomes]));
+
+
+# Poderiamos ter feito utilizando Generators.
+nome = ["Luccas", "Leonardo", "Camila", "Carla", "Cassiopeia', "Silvio']
+print(any((nome[0] == "L" for nome in nomes));
+
+# List Comprehension
+res = [nome[0] == "L" for nome in nomes]
+print(type(res))
+print(res)
+
+# Generator
+res = (nome[0]=="L" for nome in nomes)
+print(type(res))
+print(res)
+
+# Utilidade de getsizeof()? -> Retorna a quantidade de bytes em memória do elemento passado como parâmetro
+from sys import getsizeof
+# Mostra quantos bytes a string "Luccas" est[a ocupando em memória. Quanto aior a string, mais espaço ocupa.
+
+print(getsizeof("Lucas"))
+
+# Gerando uma lista de números com List Comprehension
+list_comp = getsizeof([x * 5 for x in range(1000)]);
+
+# Gerando uma lista de números com Set Comprehension
+set_comp = getsizeof({x * 5 for x in range(1000)});
+
+# Gerando uma lista de números com Dictionary Comprehension
+dic_comp = getsizeof({x * 5 for x in range(1000)});
+
+
+# Gerando uma lista de números com Generator
+gen = getsizeof(x * 5 for x in range(1000));
+
+print("Para fazer a mesma tarefa gastamos em memória:");
+print(f"List Comprehension: {list_comp}");
+print(f"Set Comprehension: {set_comp}");
+print(f"Dictionary Comprehension: {dic_comp}");
+print(f"Generator: {gen}");
+
+
+"""
+# Eu posso iterar 
+gen = (x *10 for x in range(1000));
+print(gen);
+print(type(gen))
+
+for num in gen: 
+    print(num);
+

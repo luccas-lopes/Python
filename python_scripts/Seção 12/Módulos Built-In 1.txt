@@ -1,0 +1,46 @@
+"""
+Trabalhando com módulos Built-In (Módulo integrados que já vem instalados no Python)
+________________________
+|Python| Módulo builtin|
+------------------------
+# Utilizandos alias (apelidos) para módulos/funções
+import random as rdm
+
+print(random.random())
+
+# Podemos importar todas as funções de um módulo utilizando *
+
+from random import *
+# Não é necessário a especificação do módulo
+print(random());
+
+# Importando todo o módulo
+
+import random
+
+print(random.random());
+
+
+from random import randint as rdi
+print(rdi(5, 89));
+
+
+from random import randint as rdi, random as rdm
+print(rdi(5, 89));
+print(rdm());
+"""
+
+# Costumamos a utilizar tuple para colocar múltiplos imports de um mesmo módulo
+
+from random import (
+random, 
+randint, 
+shuffle, 
+choice)
+
+print(random())
+print(randint(3, 98));
+lista = ["Luccas", "Lopes", "Silva"]
+shuffle(lista)
+print(lista);
+print(choice[1, 2, 3]);

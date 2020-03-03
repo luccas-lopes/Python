@@ -1,0 +1,37 @@
+"""
+min e max
+max() -> Retorna maior valor em um iterável ou o maior de dois ou mais elementos.
+
+"""
+#Ez
+#Exemplos:
+
+vector = [1, 4, 2, 3, 1, 4, 423]
+print(max(lista));  # 423
+
+tupla = (1, 4, 2, 3, 1, 4, 423)
+print(max(tupla)); # 423;
+
+conjunto = {1, 4, 2, 3, 1, 4, 423}
+print(max(conjunto)); # 423;
+
+dicionario = {"a": 1, "b": 4, "c": 2, "d": 3}
+print(max(dicionario)); # Para chave
+print(max(dicionario.values)); # Para valor dentro da chave
+
+print(max(3, 34));
+
+# Faça um programa que receba dois valores e imprima o maior deles.
+n1 = int(input())
+n2 = int(input())
+print(max(n1, n2));
+print(min(n1, n2));
+print(max("a, ab", "abc") # abc;
+print(min("a, ab", "abc") # a;
+
+nomes = ["Arya", "Samson", "Dora", "Tim", "Olivander"]
+print(max(nomes)) # Tim
+print(min(nomes)) # Arya
+print(max(nomes, key = lambda nome: len(nome))) # Olivander;
+print(min(nomes, key = lambda nome: len(nome))) # Tim;
+
